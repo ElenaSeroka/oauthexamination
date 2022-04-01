@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+  
+</head>
+
+<body class="container">
+
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+
+  <main>
+
+    <div class="jumbotron">
+
+
+      <h1 class="display-4">User</h1>
+ 
+  
+
+      <p class="lead"><strong>Nick: </strong><%= viewData.userinfo.username %></p>
+      <p class="lead"><strong>Name: </strong><%= JSON.stringify(viewData.userinfo.name) %></p>
+      <p class="lead"><strong>Id: </strong><%= JSON.stringify(viewData.userinfo.id) %></p>
+      <p class="lead"><strong>E-mail: </strong><%= JSON.stringify(viewData.userinfo.email) %></p>
+      <p class="lead"><strong>Latest sign in: </strong><%= JSON.stringify(viewData.userinfo.last_sign_in_at) %></p>
+      <img src= "<%= viewData.userinfo.avatar_url %>" class="shadow p-3 mb-5 bg-white rounded" alt="avatar">
+    </br>
+      <a class="btn btn-outline-primary" href="/user/loggedin" role="button">Get history</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+
+</body>
+
+
+</html>
