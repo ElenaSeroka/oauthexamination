@@ -56,7 +56,7 @@ export class UserController {
             Authorization: `Bearer ${accessToken} `
           }
         }))
-        console.log(historyData)
+        // console.log(historyData)
         pageNr++
       }
 
@@ -71,7 +71,7 @@ export class UserController {
           }
         }
       }
-      console.log(myEvents.length)
+      // console.log(myEvents.length)
       const viewData = myEvents
       res.render('pages/history', { viewData })
     } catch (error) {

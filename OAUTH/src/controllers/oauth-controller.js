@@ -46,7 +46,9 @@ export class OauthController {
   async handleGitlabCallback (req, res, next) {
     try {
       if (req.session.state !== req.query.state) {
-        throw createError('Uh oh! Something went wrong!')
+        console.log('req.session.state:' + req.session.state)
+        console.log('req.query.state:' + req.query.state)
+        throw createError('Uh oh! Something went wrong!' + 'req.query.state:' + req.query.state + 'req.session.state:' + req.session.state)
       }
 
       const parameters = {
