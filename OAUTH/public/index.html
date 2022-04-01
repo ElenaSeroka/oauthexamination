@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Log in at Linnaeus University</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" href="/idp/resources/20170112/images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/idp/resources/20170112/css/main.css">
+	<script type="text/javascript" src="/idp/resources/20170112/scripts/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="/idp/resources/20170112/scripts/ios-orientationchange-fix.js"></script>
+	<script type="text/javascript" src="/idp/resources/20170112/scripts/login.js"></script>
+
+</head>
+
+<body>
+	<div class="wrapper login">
+
+
+
+
+
+		<header>
+			<div class="container-header container">
+				<img src="/idp/resources/20170112/images/lnu_logo_en.png" alt="Linn�universitetet"/>
+				<a href="&#x2f;idp&#x2f;profile&#x2f;SAML2&#x2f;Redirect&#x2f;SSO&#x3f;execution&#x3d;e1s1&amp;l&#x3d;sv"
+					id="lang">På svenska</a>
+			</div>
+		</header>
+		<div class="container">
+			<div class="content">
+				<a href="#" id="helplink"><img alt="Help" src="/idp/resources/20170112/images/help-icon.png"></a>
+					<h1>Log in at Linnaeus University</h1>
+
+					<legend>
+						Login to <strong>Gitlab</strong>
+					</legend>
+
+
+
+
+
+					<form action="/idp/profile/SAML2/Redirect/SSO?execution=e1s1" method="post">
+
+						<div class="form-element-wrapper">
+							<input class="form-element form-field" id="username" name="j_username" type="text"  placeholder="Username" value="" autofocus>
+	</div>
+
+							<div class="form-element-wrapper">
+								<input class="form-element form-field" id="password" name="j_password" type="password" value="" placeholder="Password">
+	</div>
+
+								<div class="form-element-wrapper buttons">
+									<input type="submit" id="btnSubmit" name="_eventId_proceed" value="Login">
+	</div>
+
+
+
+
+
+
+
+									<ul class="list list-help">
+										<li class="list-help-item"><a
+												href="https://account.lnu.se/Password/Change?returnurl=https%3A%2F%2Fgitlab.lnu.se&l=en">Do
+												you want to change password?</a></li>
+										<li class="list-help-item"><a href="https://account.lnu.se/">Did you forget your
+												student password?</a></li>
+									</ul>
+
+					</form>
+
+					<script type="text/javascript">
+						$(function () {
+	$("#btnSubmit").click(function () {
+		setTimeout(function () { $("#btnSubmit").attr("disabled", true) }, 0);
+	});
+});
+					</script>
+					<aside id="help" class="help-box">
+						<div class="help-box-content">
+							<h2>Log in with your Lnu account</h2>
+							<p>Use your username and password (<a
+									href="https://serviceportalen.lnu.se/en-us/article/817970/"
+									rel="nofollow">student</a>/<a
+									href="https://serviceportalen.lnu.se/en-us/article/1290625/"
+									rel="nofollow">employee</a>).</p>
+						</div>
+					</aside>
+			</div>
+		</div>
+
+		<footer>
+			<div class="container-footer container">
+				<p class="footer-text">To log out safely, close your browser when you are finished.<br/><br/><a
+						style="color:#58A2E8;font-size:80%"
+						href="https://lnu.se/en/medarbetare/organisation/it/steering-documents-it/">Privacy policy</a>
+				</p>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
