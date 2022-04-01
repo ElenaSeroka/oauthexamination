@@ -1,10 +1,11 @@
 import createError from 'http-errors'
 
 /**
+ * Makes sure there is a session active.
  *
- * @param req
- * @param res
- * @param next
+ * @param {object} req - Express request object.
+ * @param {object} res - Express response object.
+ * @param {Function} next - Express next middleware function.
  */
 export async function checkSession (req, res, next) {
   try {

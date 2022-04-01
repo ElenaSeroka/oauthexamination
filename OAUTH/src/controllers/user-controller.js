@@ -6,10 +6,11 @@ import createError from 'http-errors'
  */
 export class UserController {
   /**
+   * Shows the users info.
    *
-   * @param req
-   * @param res
-   * @param next
+   * @param {object} req - Express request object.
+   * @param {object} res - Express response object.
+   * @param {Function} next - Express next middleware function.
    */
   async showUserInfo (req, res, next) {
     try {
@@ -36,12 +37,13 @@ export class UserController {
   }
 
   /**
+   * Shows the users history.
    *
-   * @param req
-   * @param res
-   * @param next
+   * @param {object} req - Express request object.
+   * @param {object} res - Express response object.
+   * @param {Function} next - Express next middleware function.
    */
-  async showHistory(req, res, next) {
+  async showHistory (req, res, next) {
     try {
       const historyData = []
       const accessToken = req.session.tokenInfo.access_token

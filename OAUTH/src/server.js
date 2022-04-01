@@ -49,5 +49,5 @@ app.use((err, req, res, next) => {
   res.render('pages/error', { viewData })
 })
 
-app.listen(3000)
+app.listen()
 // console.log('Server is listening on port 8080')
