@@ -48,5 +48,6 @@ app.use((err, req, res, next) => {
   res.render('pages/error', { viewData })
 })
 
-app.listen()
+const PORT = process.env.PORT
+app.listen(PORT)
 // console.log('Server is listening on port 8080')
