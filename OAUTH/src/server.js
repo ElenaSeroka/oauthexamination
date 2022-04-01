@@ -22,7 +22,6 @@ app.use(
   })
 )
 
-
 // set the view engine to ejs
 app.set('view engine', 'ejs')
 app.use(session({
