@@ -5,6 +5,7 @@ import router from './routes/router.js'
 import cors from 'cors'
 
 const app = express()
+app.use(express.static('/'))
 
 app.use(
   helmet({
@@ -20,6 +21,7 @@ app.use(
     crossOriginEmbedderPolicy: false
   })
 )
+
 
 // set the view engine to ejs
 app.set('view engine', 'ejs')
@@ -47,5 +49,5 @@ app.use((err, req, res, next) => {
   res.render('pages/error', { viewData })
 })
 
-app.listen(8080)
-console.log('Server is listening on port 8080')
+app.listen(3000)
+// console.log('Server is listening on port 8080')
