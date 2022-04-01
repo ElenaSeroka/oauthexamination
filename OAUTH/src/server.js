@@ -37,7 +37,14 @@ app.use(session({
   }
 }))
 
+app.set('trust proxy', 1)
 app.use(cors(), router)
+
+// Executes middleware before the routes.
+app.use((req, res, next) => {
+  next()
+})
+
 app.use('/', router)
 app.use((err, req, res, next) => {
   const viewData = {
@@ -50,4 +57,4 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT
 app.listen(PORT)
-// console.log('Server is listening on port 8080')
+console.log('Server is listening on port 3000')
